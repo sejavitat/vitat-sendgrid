@@ -10,21 +10,12 @@ module Vitat
       end
 
       def valid?
-        api_key.present? && from_mail.present? && from_name.present?
+        !invalid?
       end
 
       def invalid?
-        !valid?
+        api_key&.empty? || from_mail&.empty? || from_name&.empty?
       end
-    end
-
-    class << self
-      attr_accessor :configuration
-    end
-
-    def self.configure
-      self.configuration ||= Configuration.new
-      yield(configuration)
     end
   end
 end

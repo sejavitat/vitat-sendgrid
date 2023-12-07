@@ -1,0 +1,23 @@
+PATH
+  remote: .
+  specs:
+    vitat-sendgrid (0.1.0)
+      sendgrid-ruby
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (13.0.6)
+    ruby_http_client (3.5.5)
+    sendgrid-ruby (6.7.0)
+      ruby_http_client (~> 3.4)
+
+PLATFORMS
+  x86_64-darwin-19
+
+DEPENDENCIES
+  rake (~> 13.0)
+  vitat-sendgrid!
+
+BUNDLED WITH
+   2.4.18

@@ -1,4 +1,5 @@
 require 'sendgrid-ruby'
+require_relative "configuration"
 
 module Vitat
   module Sendgrid
@@ -12,7 +13,7 @@ module Vitat
 
         @from_mail = Vitat::Sendgrid.configuration.from_mail
         @from_name = Vitat::Sendgrid.configuration.from_name
-        @sendgrid_client = SendGrid::API.new(api_key: VitatSendgrid.configuration.api_key).client
+        @sendgrid_client = SendGrid::API.new(api_key: Vitat::Sendgrid.configuration.api_key).client
       end
 
       def send_template_email(to, template_id, params = {})
