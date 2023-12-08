@@ -8,13 +8,13 @@ Essa gem encapsula a parte da lógica de envio de emails com template via Sendgr
 Instale a gem no seu projeto Rails adicionando uma dessas linhas no Gemfile:
 
 ```
-gem 'vitat-sendgrid', git: 'https://github.com/sejavitat/vitat-sendgrid', branch: 'main'
+gem 'vitat-sendgrid', git: 'https://github.com/sejavitat/vitat-sendgrid-ruby', branch: 'main'
 ```
 
 ou
 
 ```
-gem 'vitat-sendgrid', git: 'https://github.com/sejavitat/vitat-sendgrid', tag: 'v1.0.0'
+gem 'vitat-sendgrid', git: 'https://github.com/sejavitat/vitat-sendgrid-ruby', tag: 'v1.0.0'
 ```
 
 
@@ -67,7 +67,7 @@ Acesse o console interativo de Ruby e use a gem:
 
 ## Contribuindo
 
-Contribuições são bem-vindas! Abra seu PR ou issue em: https://github.com/sejavitat/vitat-sendgrid.
+Contribuições são bem-vindas! Abra seu PR ou issue em: https://github.com/sejavitat/vitat-sendgrid-ruby.
 
 1. Faça suas alterações no código localmente e comite suas mudanças com mensagens claras e descritivas.
 2. Atualize a versão da gem em `lib/vitat/sendgrid/version.rb` seguindo o padrão de versionamento semântico (major.minor.patch).
