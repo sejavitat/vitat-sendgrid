@@ -1,17 +1,20 @@
 # Vitat::Sendgrid
 
-Essa gem encapsula a parte da lógica de envio de emails com template via Sendgrid.
+A gem facilita o envio de emails com template via Sendgrid.
 
 
 ## Instalação
 
-Instale a gem no seu projeto Rails adicionando uma dessas linhas no Gemfile:
+Instale no seu projeto Rails adicionando uma dessas linhas no Gemfile:
+
+Puxado direto da main:
 
 ```
 gem 'vitat-sendgrid', git: 'https://github.com/sejavitat/vitat-sendgrid-ruby', branch: 'main'
 ```
 
-ou
+Apontando para uma tag de versão:<br>
+**Recomendado**
 
 ```
 gem 'vitat-sendgrid', git: 'https://github.com/sejavitat/vitat-sendgrid-ruby', tag: 'v1.0.0'
@@ -36,7 +39,7 @@ end
 sendgrid_client = Vitat::Sendgrid::Client.new
 
 sendgrid_client.send_template_email(
-  'julia.frederico@vitat.com.br', # Quem vai receber o email
+  'user@gmail.com', # Quem vai receber o email
   'd-93531b6be4874ee1b59a4a9eda41580b', # ID do template do email
   {
     data: {
@@ -50,15 +53,12 @@ sendgrid_client.send_template_email(
 
 ## Desenvolvimento
 
-Faça o build localmente com:
+Faça o build e instale localmente:
 
     $ bundle build vitat-sendgrid.gemspec
-
-Instale localmente com:
-
     $ gem install vitat-sendgrid-<version>.gem
 
-Acesse o console interativo de Ruby e use a gem:
+Acesse o console interativo de Ruby:
 
     $ bundle exec irb
 
@@ -69,7 +69,7 @@ Acesse o console interativo de Ruby e use a gem:
 
 Contribuições são bem-vindas! Abra seu PR ou issue em: https://github.com/sejavitat/vitat-sendgrid-ruby.
 
-1. Faça suas alterações no código localmente e comite suas mudanças com mensagens claras e descritivas.
+1. Faça suas alterações no código localmente e comite suas mudanças com mensagens descritivas.
 2. Atualize a versão da gem em `lib/vitat/sendgrid/version.rb` seguindo o padrão de versionamento semântico (major.minor.patch).
     
     Exemplo: para uma pequena correção, incremente a parte 'patch'; para novas funcionalidades, a 'minor'; e para mudanças incompatíveis com versões anteriores, a 'major'.
@@ -83,10 +83,10 @@ Contribuições são bem-vindas! Abra seu PR ou issue em: https://github.com/sej
     git tag -a vx.y.z -m "Release version x.y.z"
     ```
 
-    Substitua x.y.z pela versão atual.
-
 5. Faça push da tag para o repositório no GitHub.
     
     ```
     git push origin vx.y.z
     ```
+
+    Substitua x.y.z pela versão atual.
